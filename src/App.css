@@ -1,38 +1,230 @@
-.App {
-  text-align: center;
+/* Global Reset & Page Background */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0b1c3d 0%, #1d3557 50%, #457b9d 100%);
+  background-attachment: fixed;
+  color: #f8f9fa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(11, 28, 61, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #ffb703;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.lasu-logo {
+  height: 45px;
+  width: auto;
+}
+
+.app-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffb703;
+}
+
+.nav-login-btn {
+  background: #ffb703;
+  color: #0b1c3d !important;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: bold !important;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.nav-login-btn:hover {
+  background: #faa307;
+  transform: translateY(-2px);
+}
+
+/* Home Page Containers & Hero */
+.home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: calc(100vh - 80px);
+}
+
+.hero-section {
+  width: 100%;
+  background: linear-gradient(rgba(11, 28, 61, 0.88), rgba(29, 53, 87, 0.85)), 
+              url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
   color: white;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #ffb703;
+  font-weight: 800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-section p {
+  font-size: 1.15rem;
+  color: #e0e0e0;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+/* Auth Buttons Group */
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #ffb703;
+  color: #0b1c3d;
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #faa307;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #1d3557;
+}
+
+.btn-secondary:hover {
+  background-color: #f1faee;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Universal Glassmorphism Cards for Login, Register, Upload, Reset Password */
+.container, .auth-container, .login-container, .register-container {
+  max-width: 480px;
+  margin: 50px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+.container h1, .auth-container h2, .login-container h2, .register-container h2 {
+  color: #ffb703;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Form Controls & Inputs */
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #f1faee;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #ffb703;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Extra Links inside Auth Forms (e.g., "Forgot Password?", "Don't have an account?") */
+.auth-links, .form-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.auth-links a, .form-footer a {
+  color: #ffb703;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-links a:hover, .form-footer a:hover {
+  text-decoration: underline;
 }

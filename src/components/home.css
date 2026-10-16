@@ -1,0 +1,126 @@
+.home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(11, 28, 61, 0.9), rgba(29, 53, 87, 0.85)), 
+              url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  
+  padding: 80px 20px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.hero-section p {
+  font-size: 1.15rem;
+  color: #e0e0e0;
+  max-width: 300px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+/* Auth Buttons Group */
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #ffb703;
+  color: #0b1c3d;
+}
+
+.btn-primary:hover {
+  background-color: #ff9e00;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #1d3557;
+}
+
+.btn-secondary:hover {
+  background-color: #f1faee;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Features Section */
+.features-section {
+  padding: 50px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1d3557;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin: 20px 20px 10px 20px;
+  color: #1d3557;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 20px 25px 20px;
+  line-height: 1.5;
+}
